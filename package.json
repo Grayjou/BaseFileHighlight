@@ -39,7 +39,7 @@
       "properties": {
         "baseFileHighlight.highlightColor": {
           "type": "string",
-          "default": "#98FF98",
+          "default": "charts.green",
           "description": "Color to highlight base files (files with no local dependencies). Use hex color codes like #98FF98 for mint green."
         },
         "baseFileHighlight.useSymbol": {
@@ -49,7 +49,7 @@
         },
         "baseFileHighlight.symbolColor": {
           "type": "string",
-          "default": "#98FF98",
+          "default": "#charts.green",
           "description": "Color for the symbol indicator when useSymbol is enabled."
         },
         "baseFileHighlight.enabled": {
