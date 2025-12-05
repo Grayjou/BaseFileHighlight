@@ -3,11 +3,24 @@
   "displayName": "Base File Highlight",
   "description": "Highlights files with no local dependencies (installed packages only)",
   "version": "0.0.1",
+  "publisher": "grayjou",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Grayjou/BaseFileHighlight"
+  },
   "engines": {
     "vscode": "^1.74.0"
   },
   "categories": [
     "Other"
+  ],
+  "keywords": [
+    "highlight",
+    "dependencies",
+    "file-explorer",
+    "python",
+    "javascript",
+    "typescript"
   ],
   "activationEvents": [
     "onStartupFinished"
@@ -51,7 +64,8 @@
     "watch": "tsc -watch -p ./",
     "pretest": "npm run compile",
     "lint": "eslint src --ext ts",
-    "test": "node ./out/test/runTest.js"
+    "test": "node ./out/test/runTest.js",
+    "package": "npx vsce package"
   },
   "devDependencies": {
     "@types/node": "^18.x",
