@@ -46,18 +46,19 @@ Access settings via `File > Preferences > Settings` and search for "Base File Hi
   - Enable or disable the extension
 
 - **`baseFileHighlight.highlightColor`** (default: `#98FF98`)
-  - Color identifier for highlighting base files
-  - Can be a hex color code like `#98FF98` (mint green) or `#FFD700` (gold)
-  - Can also be a VSCode theme color ID like `charts.green` or `charts.yellow`
-  - Note: Hex colors may not be fully supported by all VSCode themes
+  - Color for highlighting base files
+  - Supports hex color codes like `#98FF98` (mint green), `#FFD700` (gold), or `#4FC3F7` (light blue)
+  - Can also use VSCode theme color IDs like `charts.green`, `charts.blue`, or `charts.yellow`
+  - Hex colors are fully supported in VSCode file decorations
 
 - **`baseFileHighlight.useSymbol`** (default: `false`)
   - Use a symbol indicator (●) instead of text color
   - Useful to avoid conflicts with red text from compiler errors
 
 - **`baseFileHighlight.symbolColor`** (default: `#98FF98`)
-  - Color identifier for the symbol when `useSymbol` is enabled
-  - Accepts same format as `highlightColor`
+  - Color for the symbol when `useSymbol` is enabled
+  - Supports both hex color codes and VSCode theme color IDs
+  - Same format as `highlightColor`
 
 - **`baseFileHighlight.fileExtensions`** (default: `[".py", ".js", ".ts", ".jsx", ".tsx"]`)
   - File extensions to analyze for dependencies
@@ -99,6 +100,21 @@ npm run lint
 ```bash
 npm run watch
 ```
+
+### Testing
+```bash
+# Run unit tests
+npm test
+
+# Compile and lint before testing
+npm run pretest
+```
+
+The test suite includes:
+- Extension activation tests
+- Configuration validation tests
+- Import detection tests for Python and JavaScript/TypeScript files
+- Hex color support verification
 
 ## License
 

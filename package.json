@@ -52,7 +52,13 @@
         },
         "baseFileHighlight.fileExtensions": {
           "type": "array",
-          "default": [".py", ".js", ".ts", ".jsx", ".tsx"],
+          "default": [
+            ".py",
+            ".js",
+            ".ts",
+            ".jsx",
+            ".tsx"
+          ],
           "description": "File extensions to analyze for dependencies."
         }
       }
@@ -68,11 +74,15 @@
     "package": "npx vsce package"
   },
   "devDependencies": {
+    "@types/mocha": "^10.0.10",
     "@types/node": "^18.x",
     "@types/vscode": "^1.74.0",
     "@typescript-eslint/eslint-plugin": "^6.0.0",
     "@typescript-eslint/parser": "^6.0.0",
+    "@vscode/test-electron": "^2.5.2",
     "eslint": "^8.45.0",
+    "glob": "^13.0.0",
+    "mocha": "^11.7.5",
     "typescript": "^5.1.6"
   }
 }
