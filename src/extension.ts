@@ -2,6 +2,8 @@ import * as vscode from 'vscode';
 import * as path from 'path';
 import * as fs from 'fs';
 
+const INITIAL_REFRESH_DELAY_MS = 1000;
+
 export function activate(context: vscode.ExtensionContext) {
     console.log('Base File Highlight extension is now active');
 
@@ -28,13 +30,13 @@ export function activate(context: vscode.ExtensionContext) {
     );
 
     // Initial refresh
-    setTimeout(() => decorationProvider.refresh(), 1000);
+    setTimeout(() => decorationProvider.refresh(), INITIAL_REFRESH_DELAY_MS);
 }
 
 export function deactivate() {}
 
 class BaseFileDecorationProvider implements vscode.FileDecorationProvider {
-    private _onDidChangeFileDecorations = new vscode.EventEmitter<vscode.Uri | vscode.Uri[]>();
+    private _onDidChangeFileDecorations = new vscode.EventEmitter<vscode.Uri | vscode.Uri[] | undefined>();
     readonly onDidChangeFileDecorations = this._onDidChangeFileDecorations.event;
     private baseFiles = new Set<string>();
 
@@ -44,7 +46,8 @@ class BaseFileDecorationProvider implements vscode.FileDecorationProvider {
 
     refresh() {
         this.analyzeWorkspace();
-        this._onDidChangeFileDecorations.fire(undefined as unknown as vscode.Uri);
+        // Fire undefined to refresh all decorations
+        this._onDidChangeFileDecorations.fire(undefined);
     }
 
     provideFileDecoration(uri: vscode.Uri): vscode.ProviderResult<vscode.FileDecoration> {
@@ -225,9 +228,21 @@ class BaseFileDecorationProvider implements vscode.FileDecorationProvider {
         
         // If it doesn't start with . or /, and matches the pattern, it's likely a node module
         if (!importPath.startsWith('.') && !importPath.startsWith('/')) {
-            return nodeModulePattern.test(importPath.split('/')[0] + (importPath.includes('/') ? '/' + importPath.split('/')[1] : ''));
+            const packagePath = this.extractPackagePath(importPath);
+            return nodeModulePattern.test(packagePath);
         }
 
         return false;
+    }
+
+    private extractPackagePath(importPath: string): string {
+        // Extract the package name from the import path
+        // For @scope/package/subpath, returns @scope/package
+        // For package/subpath, returns package
+        const parts = importPath.split('/');
+        if (parts[0].startsWith('@') && parts.length > 1) {
+            return `${parts[0]}/${parts[1]}`;
+        }
+        return parts[0];
     }
 }

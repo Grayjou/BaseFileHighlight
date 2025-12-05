@@ -46,15 +46,18 @@ Access settings via `File > Preferences > Settings` and search for "Base File Hi
   - Enable or disable the extension
 
 - **`baseFileHighlight.highlightColor`** (default: `#98FF98`)
-  - Hex color code for highlighting base files
-  - Example: `#98FF98` (mint green), `#FFD700` (gold)
+  - Color identifier for highlighting base files
+  - Can be a hex color code like `#98FF98` (mint green) or `#FFD700` (gold)
+  - Can also be a VSCode theme color ID like `charts.green` or `charts.yellow`
+  - Note: Hex colors may not be fully supported by all VSCode themes
 
 - **`baseFileHighlight.useSymbol`** (default: `false`)
   - Use a symbol indicator (●) instead of text color
   - Useful to avoid conflicts with red text from compiler errors
 
 - **`baseFileHighlight.symbolColor`** (default: `#98FF98`)
-  - Color for the symbol when `useSymbol` is enabled
+  - Color identifier for the symbol when `useSymbol` is enabled
+  - Accepts same format as `highlightColor`
 
 - **`baseFileHighlight.fileExtensions`** (default: `[".py", ".js", ".ts", ".jsx", ".tsx"]`)
   - File extensions to analyze for dependencies
