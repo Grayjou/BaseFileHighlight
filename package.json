@@ -5,7 +5,7 @@
   "version": "0.0.1",
   "publisher": "grayjou",
   "publisherDisplayName": "Grayjou",
-  "icon": "images/icon.svg",
+  "icon": "images/icon.png",
   "repository": {
     "type": "git",
     "url": "https://github.com/Grayjou/BaseFileHighlight"

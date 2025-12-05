@@ -1,7 +1,7 @@
 # Base File Highlight
 
 <p align="center">
-  <img src="images/icon.svg" alt="Base File Highlight icon" width="160" />
+  <img src="images/icon.png" alt="Base File Highlight icon" width="160" />
 </p>
 
 A VSCode extension that highlights files with no local dependencies (installed packages only).
