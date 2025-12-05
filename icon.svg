@@ -1,0 +1,25 @@
+<svg width="128" height="128" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background cluster shapes -->
+  <g stroke="#FFFFFF" stroke-width="4" fill="#1F2B63" stroke-linejoin="round">
+    <circle cx="40" cy="42" r="28"/>
+    <circle cx="92" cy="40" r="20"/>
+    <circle cx="36" cy="92" r="16"/>
+    <circle cx="88" cy="88" r="30"/>
+  </g>
+
+  <!-- Main center circle (outer navy ring) -->
+  <circle cx="64" cy="64" r="34" fill="#0E1A46" stroke="#FFFFFF" stroke-width="4"/>
+
+  <!-- Mint highlight ring -->
+  <circle cx="64" cy="64" r="28" fill="none" stroke="#A8FF5A" stroke-width="5"/>
+
+  <!-- Inner blue circle -->
+  <circle cx="64" cy="64" r="22" fill="#304A99"/>
+
+  <!-- Center "code lines" -->
+  <g fill="#A8FF5A">
+    <rect x="53" y="54" width="22" height="4" rx="2"/>
+    <rect x="53" y="63" width="22" height="4" rx="2"/>
+    <rect x="53" y="72" width="18" height="4" rx="2"/>
+  </g>
+</svg>
