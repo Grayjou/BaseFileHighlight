@@ -1,0 +1,64 @@
+{
+  "name": "base-file-highlight",
+  "displayName": "Base File Highlight",
+  "description": "Highlights files with no local dependencies (installed packages only)",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.74.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "configuration": {
+      "title": "Base File Highlight",
+      "properties": {
+        "baseFileHighlight.highlightColor": {
+          "type": "string",
+          "default": "#98FF98",
+          "description": "Color to highlight base files (files with no local dependencies). Use hex color codes like #98FF98 for mint green."
+        },
+        "baseFileHighlight.useSymbol": {
+          "type": "boolean",
+          "default": false,
+          "description": "Use a symbol indicator instead of text color to avoid conflicts with compiler errors."
+        },
+        "baseFileHighlight.symbolColor": {
+          "type": "string",
+          "default": "#98FF98",
+          "description": "Color for the symbol indicator when useSymbol is enabled."
+        },
+        "baseFileHighlight.enabled": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enable or disable base file highlighting."
+        },
+        "baseFileHighlight.fileExtensions": {
+          "type": "array",
+          "default": [".py", ".js", ".ts", ".jsx", ".tsx"],
+          "description": "File extensions to analyze for dependencies."
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile",
+    "lint": "eslint src --ext ts",
+    "test": "node ./out/test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/node": "^18.x",
+    "@types/vscode": "^1.74.0",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "eslint": "^8.45.0",
+    "typescript": "^5.1.6"
+  }
+}
