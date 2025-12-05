@@ -4,15 +4,22 @@
   "description": "Highlights files with no local dependencies (installed packages only)",
   "version": "0.0.1",
   "publisher": "grayjou",
+  "publisherDisplayName": "Grayjou",
+  "icon": "images/icon.svg",
   "repository": {
     "type": "git",
     "url": "https://github.com/Grayjou/BaseFileHighlight"
+  },
+  "bugs": {
+    "url": "https://github.com/Grayjou/BaseFileHighlight/issues"
   },
   "engines": {
     "vscode": "^1.74.0"
   },
   "categories": [
-    "Other"
+    "Linters",
+    "Programming Languages",
+    "Visualization"
   ],
   "keywords": [
     "highlight",
