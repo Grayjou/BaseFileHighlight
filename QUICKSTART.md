@@ -51,9 +51,9 @@ Example settings in `settings.json`:
 ```json
 {
   "baseFileHighlight.enabled": true,
-  "baseFileHighlight.highlightColor": "#98FF98",
+  "baseFileHighlight.highlightColor": "charts.green",
   "baseFileHighlight.useSymbol": false,
-  "baseFileHighlight.symbolColor": "#98FF98",
+  "baseFileHighlight.symbolColor": "charts.green",
   "baseFileHighlight.fileExtensions": [".py", ".js", ".ts", ".jsx", ".tsx"]
 }
 ```
