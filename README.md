@@ -9,7 +9,7 @@ A VSCode extension that highlights files with no local dependencies (installed p
 ## Features
 
 - **Automatic Detection**: Identifies files that only import external packages/libraries
-- **Configurable Highlighting**: Customize the highlight color (default: mint green `#98FF98`)
+- **Configurable Highlighting**: Customize the highlight color (default: mint green `charts.green`)
 - **Symbol Mode**: Option to use a symbol indicator instead of color to avoid conflicts with compiler errors
 - **Multi-Language Support**: Works with Python, JavaScript, TypeScript, JSX, and TSX files
 - **Real-time Updates**: Automatically updates when files are created, modified, or deleted
@@ -49,9 +49,9 @@ Access settings via `File > Preferences > Settings` and search for "Base File Hi
 - **`baseFileHighlight.enabled`** (default: `true`)
   - Enable or disable the extension
 
-- **`baseFileHighlight.highlightColor`** (default: `#98FF98`)
+- **`baseFileHighlight.highlightColor`** (default: `charts.green`)
   - Color for highlighting base files
-  - Supports hex color codes like `#98FF98` (mint green), `#FFD700` (gold), or `#4FC3F7` (light blue)
+  - Supports hex color codes like `charts.green` (mint green), `#FFD700` (gold), or `#4FC3F7` (light blue)
   - Can also use VSCode theme color IDs like `charts.green`, `charts.blue`, or `charts.yellow`
   - Hex colors are fully supported in VSCode file decorations
 
@@ -59,7 +59,7 @@ Access settings via `File > Preferences > Settings` and search for "Base File Hi
   - Use a symbol indicator (●) instead of text color
   - Useful to avoid conflicts with red text from compiler errors
 
-- **`baseFileHighlight.symbolColor`** (default: `#98FF98`)
+- **`baseFileHighlight.symbolColor`** (default: `charts.green`)
   - Color for the symbol when `useSymbol` is enabled
   - Supports both hex color codes and VSCode theme color IDs
   - Same format as `highlightColor`

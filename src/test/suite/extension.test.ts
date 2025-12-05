@@ -29,9 +29,9 @@ suite('Base File Highlight Extension Test Suite', () => {
 		const config = vscode.workspace.getConfiguration('baseFileHighlight');
 		
 		assert.strictEqual(config.get('enabled'), true);
-		assert.strictEqual(config.get('highlightColor'), '#98FF98');
+		assert.strictEqual(config.get('highlightColor'), 'charts.green');
 		assert.strictEqual(config.get('useSymbol'), false);
-		assert.strictEqual(config.get('symbolColor'), '#98FF98');
+		assert.strictEqual(config.get('symbolColor'), 'charts.green');
 		
 		const fileExtensions = config.get<string[]>('fileExtensions');
 		assert.ok(fileExtensions);
@@ -51,8 +51,8 @@ suite('Base File Highlight Extension Test Suite', () => {
 		assert.strictEqual(config.get('symbolColor'), '#0000FF');
 		
 		// Reset to defaults
-		await config.update('highlightColor', '#98FF98', vscode.ConfigurationTarget.Global);
-		await config.update('symbolColor', '#98FF98', vscode.ConfigurationTarget.Global);
+		await config.update('highlightColor', 'charts.green', vscode.ConfigurationTarget.Global);
+		await config.update('symbolColor', 'charts.green', vscode.ConfigurationTarget.Global);
 	});
 });
 

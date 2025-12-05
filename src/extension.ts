@@ -63,8 +63,8 @@ class BaseFileDecorationProvider implements vscode.FileDecorationProvider {
 
         if (isBaseFile) {
             const useSymbol = config.get<boolean>('useSymbol', false);
-            const highlightColor = config.get<string>('highlightColor', '#98FF98');
-            const symbolColor = config.get<string>('symbolColor', '#98FF98');
+            const highlightColor = config.get<string>('highlightColor', 'charts.green');
+            const symbolColor = config.get<string>('symbolColor', 'charts.green');
 
             if (useSymbol) {
                 return {

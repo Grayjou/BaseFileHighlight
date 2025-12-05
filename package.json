@@ -40,7 +40,7 @@
         "baseFileHighlight.highlightColor": {
           "type": "string",
           "default": "charts.green",
-          "description": "Color to highlight base files (files with no local dependencies). Use hex color codes like #98FF98 for mint green."
+          "description": "Color to highlight base files (files with no local dependencies). Use color codes like charts.green for mint green."
         },
         "baseFileHighlight.useSymbol": {
           "type": "boolean",

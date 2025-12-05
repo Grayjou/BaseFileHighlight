@@ -29,9 +29,9 @@ You can customize the behavior in VSCode settings:
 ```json
 {
   "baseFileHighlight.enabled": true,
-  "baseFileHighlight.highlightColor": "#98FF98",
+  "baseFileHighlight.highlightColor": "charts.green",
   "baseFileHighlight.useSymbol": false,
-  "baseFileHighlight.symbolColor": "#98FF98",
+  "baseFileHighlight.symbolColor": "charts.green",
   "baseFileHighlight.fileExtensions": [".py", ".js", ".ts", ".jsx", ".tsx"]
 }
 ```
@@ -43,7 +43,7 @@ If you enable symbol mode, highlighted files will show a colored dot (●) inste
 ```json
 {
   "baseFileHighlight.useSymbol": true,
-  "baseFileHighlight.symbolColor": "#98FF98"
+  "baseFileHighlight.symbolColor": "charts.green"
 }
 ```
 
